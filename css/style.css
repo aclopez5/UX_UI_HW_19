@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* nav css */
+.logo {
+    width: 150px;
+    position: absolute;
+    top: 17px;
+    left: 12%;
+    text-align: center;
+    cursor: pointer;
+}
+nav {
+    height: 80px;
+}
+nav ul {
+    float: right;
+    margin-right: 25px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+nav li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav li a:hover {
+    color: #A30003;
+    transition: 0.3s;
+    font-weight: bold;
+}
+.checkbtn {
+    color: #A30003;
+    font-size: 36px;
+    line-height: 80px;
+    margin-right: 40px;
+    float: right;
+    display: none;
+    cursor: pointer;
+}
+#check {
+    display: none;
+}
+
+/* responsive nav */
+@media only screen and (max-width: 1118px) {
+    .logo {
+        left: 8%;
+    }
+}
+@media only screen and (max-width: 944px) {
+    .logo {
+        left: 6%;
+        top: 20px;
+        width: 130px;
+    }
+    nav ul li a {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .checkbtn {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 400px;
+        background: #2A2E2E;
+        top: 80px;
+        right: -150%;
+        text-align: left;
+        padding-left: 75px;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+        color: #08A4AF;
+    }
+    nav ul li a:hover {
+        color: white;
+    }
+    #check:checked ~ ul {
+        right: -75%;
+        position: absolute;
+    }
+}
+
+/* body css */
+.hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 100px auto;
+    align-items: center;
+    justify-content: center;
+}
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left {
+    flex: 10;
+    margin-right: 50px;
+}
+.right {
+    flex: 10;
+    margin-left: 50px;
+}
+h1 {
+    font-size: 50px;
+    font-family: "Gelasio", serif;
+    width: 100%;
+    display: inline-block;
+}
+.heroImg {
+    text-align: right;
+}
+.heroTxt {
+    font-size: 26px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 600px;
+    margin: 20px 0;
+}
+.btn {
+    background-color: #A30003;
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    transition: transform 0.3s;
+}
+.btn:hover {
+    transform: scale(1.2);
+    background-color: #810002; 
+}
+.projects {
+    padding: 20px 0;
+}
+.sinPrj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.sinPrj:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.pimgs {
+    flex: 1;
+    transition: transform 0.3s;
+}
+.pTxt {
+    flex: 1;
+    margin-left: 300px;
+    min-width: 450px;
+}
+.sinPrj:nth-child(even) .pTxt {
+    margin-left: 0;
+}
+.sinPrj:nth-child(even) .pimgs {
+    margin-left: 300px;   
+}
+h2 {
+    font-size: 45px;
+    font-family: "Gelasio", serif;
+    margin: 50px 0;
+}
+h3 {
+    font-size: 38px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #A30003;
+    padding-bottom: 15px;
+}
+.projects p {
+    font-size: 24px;
+}
+.bold {
+    font-weight: bold;
+}
+.pimgs:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* responsive body */
+@media only screen and (max-width: 950px) {
+    h1 {
+        font-size: 38px;
+    }
+    .heroTxt {
+        font-size: 18px;
+    }
+    .heroImg {
+        transform: scale(0.8);
+        flex: 6;
+    }
+    .btn {
+        transform: scale(0.9);
+    }
+    .pimgs {
+        transform: scale(0.9);
+    }
+    h2 {
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    .projects p {
+        font-size: 18px;
+    }
+    .pTxt {
+        margin-left: 50px;
+    }
+    .sinPrj:nth-child(even) .pimgs {
+        margin-left: 50px;   
+    }
+}
+@media only screen and (max-width: 768px) {
+    .hero .container {
+        flex-direction: column-reverse;
+        z-index: -1;
+    }
+    h1 {
+        font-size: 40px;
+        margin: 0 auto;
+    }
+    .heroTxt {
+        font-size: 20px;
+        margin: 10px auto;
+    }
+    .heroImg {
+        text-align: center;
+        transform: scale(0.8);
+    }
+    .left {
+        text-align: center;
+        padding-left: 80px;
+    }
+    .btn {
+        transform: scale(0.9);
+        justify-content: center;
+    }
+    .pimgs {
+        transform: scale(0.8);
+        width: 100%;
+        margin: 0 auto;
+    }
+    .pTxt {
+        width: 80%;
+        margin: 0 auto;
+        margin-left: 75px;
+    }
+    h2 {
+        font-size: 37px;
+    }
+    h3 {
+        font-size: 34px;
+    }
+    .projects p {
+        font-size: 20px;
+    }
+    .sinPrj {
+        flex-direction: column;
+    }
+    .sinPrj:nth-child(even) {
+        flex-direction: column;
+    }
+    .sinPrj:nth-child(even) .pimgs {
+        margin-left: 0;
+    }
+    .sinPrj:nth-child(even) .pTxt {
+        margin-left: 75px;
+    }
+}
+
+/* footer css */
+footer {
+    background-color: #2A2E2E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    margin-top: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer ul {
+    display: flex;
+    width: 100%;
+}
+footer li a {
+    padding-right: 30px;
+    color: #08A4AF;
+    font-size: 20px;
+    text-decoration: none;
+}
+footer li a:hover {
+    font-weight: bold;
+}
+.col3 {
+    padding-left: 40px;
+}
+.CR {
+    margin: auto;
+    padding: 0 50px;
+    color: #08A4AF;
+    font-size: 20px;
+}
+.col1 {
+    padding-right: 30px;
+}
+footer .iconify {
+    color: #08A4AF;
+    width:36px;
+    height: 36px;
+    display: flex;
+    float: left;
+    padding: 0 15px;
+    transition: transform 0.3s;
+}
+footer .iconify:hover {
+    transform: scale(1.2);
+}
+
+/* responsive footer */
+@media only screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+    }
+    .col2 {
+        margin: 30px;
+    }
+    .CR {
+        font-size: 16px;
+    }
+    .col1 {
+        padding-right: 0;
+    }
+}
