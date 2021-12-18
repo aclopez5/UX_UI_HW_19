@@ -8,6 +8,10 @@
     max-width: 1400px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* nav css */
 .logo {
     width: 150px;
@@ -36,10 +40,21 @@ nav li a {
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-nav li a:hover {
-    color: #A30003;
-    transition: 0.3s;
-    font-weight: bold;
+nav ul li a:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    background-color: #08A4AF;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s linear;
+}
+nav ul li a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 .checkbtn {
     color: #A30003;
@@ -108,7 +123,7 @@ nav li a:hover {
     width: 100%;
     height: 100%;
     display: flex;
-    margin: 100px auto;
+    margin: 150px auto;
     align-items: center;
     justify-content: center;
 }
@@ -119,11 +134,11 @@ nav li a:hover {
 }
 .left {
     flex: 10;
-    margin-right: 50px;
+    margin-right: 100px;
 }
 .right {
     flex: 10;
-    margin-left: 50px;
+    margin-left: 150px;
 }
 h1 {
     font-size: 50px;
@@ -137,7 +152,7 @@ h1 {
 .heroTxt {
     font-size: 26px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 600px;
+    max-width: 750px;
     margin: 20px 0;
 }
 .btn {
@@ -159,7 +174,7 @@ h1 {
     background-color: #810002; 
 }
 .projects {
-    padding: 20px 0;
+    padding: 50px 0;
 }
 .sinPrj {
     display: flex;
@@ -167,7 +182,7 @@ h1 {
     justify-content: center;
     max-width: 1000px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 .sinPrj:nth-child(even) {
     flex-direction: row-reverse;
